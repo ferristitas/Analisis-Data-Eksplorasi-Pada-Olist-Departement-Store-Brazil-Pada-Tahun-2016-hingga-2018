@@ -6,11 +6,11 @@ import matplotlib.pyplot as plt
 
 def load_data():
 
-    payments_df = pd.read_csv('/data/olist_order_payments_dataset.csv', delimiter=',')
+    payments_df = pd.read_csv('data/olist_order_payments_dataset.csv', delimiter=',')
 
-    customers_df = pd.read_csv('/data/olist_customers_dataset.csv', delimiter=',')
+    customers_df = pd.read_csv('data/olist_customers_dataset.csv', delimiter=',')
 
-    orders_df = pd.read_csv('/data/olist_orders_dataset.csv', delimiter=',')
+    orders_df = pd.read_csv('data/olist_orders_dataset.csv', delimiter=',')
 
     return payments_df, customers_df, orders_df
 
