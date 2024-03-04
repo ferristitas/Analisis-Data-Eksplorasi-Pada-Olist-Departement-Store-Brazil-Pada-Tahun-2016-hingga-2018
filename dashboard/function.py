@@ -54,7 +54,7 @@ def merge_data_customer_order(customers_df, orders_df):
     return customer_order_df
 
 def create_plot_payment_popular():
-    payments_order_df = pd.read_csv('../dashboard/main_data_payment_order.csv', delimiter=',')
+    payments_order_df = pd.read_csv('dashboard/main_data_payment_order.csv', delimiter=',')
     # Mengelompokkan data dan menghitung jumlah order unik untuk setiap jenis pembayaran
     payment_counts = payments_order_df.groupby(by="payment_type").order_id.nunique().sort_values(ascending=False).reset_index().head(10)
 
@@ -85,7 +85,7 @@ def create_plot_payment_popular():
 
 
 def create_plot_cities_popular():
-    customer_order_df = pd.read_csv('../dashboard/main_data_customer_order.csv', delimiter=',')
+    customer_order_df = pd.read_csv('dashboard/main_data_customer_order.csv', delimiter=',')
     # Mengelompokkan data dan menghitung jumlah order unik untuk setiap jenis pembayaran
     cities_counts = customer_order_df.groupby(by="customer_city").order_id.nunique().sort_values(ascending=False).reset_index().head(10)
 
